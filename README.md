@@ -4,23 +4,44 @@
 
 # Задачи
 
-# Задача про КВД, ОПЗ и скин фактор
+## Задача про КВД, ОПЗ и скин фактор
 
-## Условие задачи
-Скважина дает 40 т/сут  (стоимость нефти 10 тыс.руб./т). Скин-фактор S неизвестен. 
-Стоимость идеального ГДИС - КВД  1 млн.руб. Стоимость ОПЗ  1 млн. руб.  Снижает скин в 2 раза. Эффект длится 1 год.
+### Условие задачи
+> Скважина дает 40 т/сут  (стоимость нефти 10 тыс.руб./т). 
+> Скин-фактор S неизвестен. 
+> Стоимость идеального ГДИС - КВД  1 млн.руб. 
+> Стоимость ОПЗ  1 млн. руб.  Снижает скин в 2 раза. Эффект длится 1 год.
 
-Априорная информация 
-S = 14  вероятность 50%
-S = 7 вероятность 20%
-S = 0 вероятность 30%
+> Априорная информация 
+> * S = 14  вероятность 50%
+> * S = 7 вероятность 20%
+> * S = 0 вероятность 30%
 
 Что делать?
 
-## Решение
+### Решение
 
-[Дерево с решением](http://silverdecisions.pl/SilverDecisions.html?LOAD_SD_TREE_JSON=https://raw.githubusercontent.com/khabibullinra/decision_tree_examples/main/silverdecision_examples/%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B0_%D0%BF%D1%80%D0%BE_%D0%9A%D0%92%D0%94_%D0%9E%D0%9F%D0%97_%D0%B8_%D1%81%D0%BA%D0%B8%D0%BD.json)
+[Дерево с решением - открыть в silverdecisions.pl](http://silverdecisions.pl/SilverDecisions.html?LOAD_SD_TREE_JSON=https://raw.githubusercontent.com/khabibullinra/decision_tree_examples/main/silverdecision_examples/%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B0_%D0%BF%D1%80%D0%BE_%D0%9A%D0%92%D0%94_%D0%9E%D0%9F%D0%97_%D0%B8_%D1%81%D0%BA%D0%B8%D0%BD.json)
 
+
+## Задача про строительство скважины
+ 
+### Условие задачи
+У вас имеется возможность построить скважину.
+Стоимость 100 млн.
+
+Геологическая оценка региона бурения:
+* Плохие условия:  Р = 15%, V = 80 млн. 
+* Хорошие условия:  Р = 60%, V = 100 млн. 
+* Отличные условия:  Р = 25%, V = 120 млн. 
+
+V - ожидаемый доход за период оценки
+
+Надо ли строить скважину?
+
+
+### Решение
+[Дерево с решением - открыть в silverdecisions.pl](http://silverdecisions.pl/SilverDecisions.html?LOAD_SD_TREE_JSON=https://raw.githubusercontent.com/khabibullinra/decision_tree_examples/main/silverdecision_examples/%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B0_%D0%BF%D1%80%D0%BE_%D1%81%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D1%82%D0%B2%D0%BE_%D1%81%D0%BA%D0%B2%D0%B0%D0%B6%D0%B8%D0%BD%D1%8B.json)
 
 Хабибуллин Ринат
 2020
