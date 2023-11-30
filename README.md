@@ -18,7 +18,7 @@
 Готовы ли купить месторождение за 1.1 млрд.руб? Сколько вы готовы заплатить?
 
 
-[Дерево с решением - открыть в silverdecisions.pl](http://silverdecisions.pl/SilverDecisions.html?LOAD_SD_TREE_JSON=https://github.com/khabibullinra/decision_tree_examples/raw/main/silverdecision_examples/%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B0_1_1.json)
+[Дерево с решением - открыть в silverdecisions.pl](http://silverdecisions.pl/SilverDecisions.html?LOAD_SD_TREE_JSON=https://raw.githubusercontent.com/khabibullinra/decision_tree_examples/raw/main/silverdecision_examples/%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B0_1_1.json)
 
 
 ### 1.2 Продажа месторождения
@@ -35,7 +35,7 @@
 > Какова стоимость информации?
 
 
-[Дерево с решением - открыть в silverdecisions.pl](http://silverdecisions.pl/SilverDecisions.html?LOAD_SD_TREE_JSON=https://github.com/khabibullinra/decision_tree_examples/raw/main/silverdecision_examples/%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B0_1_2.json)
+[Дерево с решением - открыть в silverdecisions.pl](http://silverdecisions.pl/SilverDecisions.html?LOAD_SD_TREE_JSON=https://raw.githubusercontent.com/khabibullinra/decision_tree_examples/raw/main/silverdecision_examples/%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B0_1_2.json)
 
 
 ### 1.3 Продажа месторождения
@@ -62,7 +62,7 @@
 > Какова стоимость информации?
 
 
-[Дерево с решением - открыть в silverdecisions.pl](http://silverdecisions.pl/SilverDecisions.html?LOAD_SD_TREE_JSON=https://github.com/khabibullinra/decision_tree_examples/raw/main/silverdecision_examples/%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B0_1_3.json)
+[Дерево с решением - открыть в silverdecisions.pl](http://silverdecisions.pl/SilverDecisions.html?LOAD_SD_TREE_JSON=https://raw.githubusercontent.com/khabibullinra/decision_tree_examples/raw/main/silverdecision_examples/%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B0_1_3.json)
 
 
 ## 2.Задача про КВД, ОПЗ и скин фактор
