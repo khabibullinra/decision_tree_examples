@@ -1,0 +1,45 @@
+{"name": "Исследовать",
+ "type": "decision",
+ "child_edges":[
+                {"name": "Да",
+                 "voi_info":"with_info",
+                 "payoff": -5,
+                 "child_node": 
+                            {"name": "Успешность",
+                             "type": "chance",
+                             "child_edges": [
+                                            {"name": "Успех",
+                                             "payoff": 0,
+                                             "probability": 0.7,
+                                             "child_node":
+                                                            {"name": "Запасы",
+                                                             "type": "chance",
+                                                             "child_edges": [
+                                                                            {"name": "Подтвердили",
+                                                                             "payoff": 150,
+                                                                             "probability": 0.3,
+                                                                             "child_node": {"type": "terminal"}
+                                                                            },
+                                                                            {"name": "Не подтвердили",
+                                                                             "payoff": 0,
+                                                                             "probability": 0.7,
+                                                                             "child_node": {"type": "terminal"}
+                                                                            }
+                                                                            ]  
+                                                            }
+                                            },
+                                            {"name": "Провал",
+                                             "payoff": 0,
+                                             "probability": 0.3,
+                                             "child_node": {"type": "terminal"}
+                                            }
+                                            ]  
+                            }
+                },
+                {"name": "Нет",
+                 "voi_info":"without_info",
+                 "payoff": 0,
+                 "child_node": {"type": "terminal"}
+                }
+            ]  
+}

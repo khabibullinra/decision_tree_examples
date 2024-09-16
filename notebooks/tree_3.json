@@ -1,0 +1,107 @@
+{"name": "ГДИС",
+"type": "decision",
+"child_edges":[
+                {"name": "Да",
+                "voi_info":"with_info",
+                "payoff": -1,
+                "child_node": 
+                            {"name": "Скин",
+                             "type": "chance",
+                             "child_edges": [
+                                            {"name": "S=14",
+                                             "payoff": 0,
+                                             "probability": 0.5,
+                                             "child_node": 
+                                                        {"name": "ОПЗ",
+                                                         "type": "decision",
+                                                         "child_edges":[
+                                                                        {"name": "Да",
+                                                                         "payoff": 72,
+                                                                         "child_node": {"type": "terminal"}                                                                                               
+                                                                         },
+                                                                         {"name": "Нет",
+                                                                          "payoff": 0,
+                                                                          "child_node": {"type": "terminal"}
+                                                                         }
+                                                                        ]  
+                                                        }
+                                            },
+                                            {"name": "S=7",
+                                             "payoff": 0,
+                                             "probability": 0.2,
+                                             "child_node": 
+                                                        {"name": "ОПЗ",
+                                                         "type": "decision",
+                                                         "child_edges":[
+                                                                        {"name": "Да",
+                                                                         "payoff": 47,
+                                                                         "child_node": {"type": "terminal"}                                                                                               
+                                                                         },
+                                                                         {"name": "Нет",
+                                                                          "payoff": 0,
+                                                                          "child_node": {"type": "terminal"}
+                                                                         }
+                                                                        ]  
+                                                        }
+                                            },
+                                            {"name": "S=0",
+                                             "payoff": 0,
+                                             "probability": 0.3,
+                                             "child_node": 
+                                                        {"name": "ОПЗ",
+                                                         "type": "decision",
+                                                         "child_edges":[
+                                                                        {"name": "Да",
+                                                                         "payoff": -1,
+                                                                         "child_node": {"type": "terminal"}                                                                                               
+                                                                         },
+                                                                         {"name": "Нет",
+                                                                          "payoff": 0,
+                                                                          "child_node": {"type": "terminal"}
+                                                                         }
+                                                                        ]  
+                                                        }
+                                            }
+                                            ]  
+                            }
+                },
+                {"name": "Нет",
+                 "voi_info":"without_info",
+                 "payoff": 0,
+                 "child_node": 
+                        {"name": "ОПЗ",
+                         "type": "decision",
+                         "child_edges":[
+                                        {"name": "Да",
+                                        "payoff": -1,
+                                        "child_node": 
+                                            {"name": "Скин",
+                                             "type": "chance",
+                                             "child_edges": [
+                                                             {"name": "S=14",
+                                                              "payoff": 73,
+                                                              "probability": 0.5,
+                                                              "child_node": {"type": "terminal"}                                                                 
+                                                             },
+                                                             {"name": "S=7",
+                                                              "payoff": 48,
+                                                              "probability": 0.2,
+                                                              "child_node": {"type": "terminal"}                                                    
+                                                             },
+                                                             {"name": "S=0",
+                                                              "payoff": 0,
+                                                              "probability": 0.3,
+                                                              "child_node": {"type": "terminal"}                          
+                                                             }
+                                                            ]  
+                                            }                                                                                       
+                                        },
+                                        {"name": "Нет",
+                                         "payoff": 0,
+                                         "child_node": {"type": "terminal"}
+                                        }
+                                    ]  
+                    }
+                }
+            ]  
+}

@@ -1,0 +1,33 @@
+{"name": "Покупать",
+ "type": "decision",
+ "child_edges":[
+                {"name": "Да",
+                 "payoff": -1000,
+                 "child_node": 
+                            {"name": "Геология",
+                             "type": "chance",
+                             "child_edges": [
+                                            {"name": "Плохая",
+                                             "payoff": 1000,
+                                             "probability": 0.3,
+                                             "child_node": {"type": "terminal"}
+                                            },
+                                            {"name": "Хорошая",
+                                             "payoff": 1100,
+                                             "probability": 0.4,
+                                             "child_node": {"type": "terminal"}
+                                            },
+                                            {"name": "Отличная",
+                                             "payoff": 1200,
+                                             "probability": 0.3,
+                                             "child_node": {"type": "terminal"}
+                                            }
+                                            ]  
+                            }
+                },
+                {"name": "Нет",
+                 "payoff": 0,
+                 "child_node": {"type": "terminal"}
+                }
+                ]  
+}
