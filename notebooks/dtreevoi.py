@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import matplotlib.patches
 import matplotlib.path
 
-from matplotlib.patches import Circle, Rectangle, FancyArrowPatch, RegularPolygon, PathPatch
+from matplotlib.patches import Circle, Rectangle, FancyArrowPatch, RegularPolygon, Path
 
 
 # ==================================================================
@@ -59,7 +59,7 @@ def _patch_decision(x, y,
     if details > 0:
         ax.annotate(label, (0.5, 1.05), xycoords=p, ha='center', va='bottom')
     if details > 1:
-        label2 = f'EMV={emv:.0f} \n' if emv!=None else ""
+        label2 = f'EMV={emv:.1f} \n' if emv!=None else ""
         label3 = f'VOI={voi:.2f}' if voi!=None else ""
         label4 = label2 + label3
         ax.annotate(label4, (0.5, -0.25), xycoords=p, ha='center', va='top')
@@ -83,7 +83,7 @@ def _patch_chance(x, y,
     if details > 0:
         ax.annotate(label, (0.5, 1.05), xycoords=p, ha='center', va='bottom')
     if details > 1:
-        label2 = f'EMV={emv:.0f},' if emv!=None else ""
+        label2 = f'EMV={emv:.1f}' if emv!=None else ""
         ax.annotate(label2, (0.5, -0.25), xycoords=p, ha='center', va='top')
 
     return p
@@ -115,7 +115,7 @@ def _patch_edge(x1, y1,
              matplotlib.path.Path.LINETO,
              ]
 
-    path = matplotlib.patches.Path(vertices, codes)
+    path = Path(vertices, codes)
 
     l = FancyArrowPatch(path=path, 
                         arrowstyle="->, head_length=4, head_width=3",
@@ -217,18 +217,17 @@ def _plot(node, ax, prob=1,  xshift=3, details=2):
                             val = node['value'] if 'value' in node else None,
                             prob = node['probability'] if 'probability' in node else None,
                             details=details)
-    #ax.add_artist(p)
 
     if 'child_edges' in node:
         for edge in node['child_edges']:
             child_node = edge['child_node']
             prob_val = edge['probability'] if 'probability' in edge else 0
-            p1 = _plot(child_node, ax, 
+            _plot(child_node, ax, 
                        prob = prob *  prob_val, 
                        xshift=xshift, 
                        details=details)
             edge_name = edge['name'] if 'name' in edge else ""
-            l = _patch_edge(node['level'] * xshift, node['num'], 
+            _patch_edge(node['level'] * xshift, node['num'], 
                         child_node['level'] * xshift, child_node['num'],
                         ax=ax, 
                         label=edge_name, 
@@ -236,8 +235,7 @@ def _plot(node, ax, prob=1,  xshift=3, details=2):
                         probability=prob_val, 
                         width=2 if prob * prob_val > 0 else 1,
                         details=details)
-            #ax.add_artist(l)
-    return p
+            
 
 def plot_tree(tree, ax, xshift=3, details=2):
     """ 
@@ -252,14 +250,16 @@ def plot_tree(tree, ax, xshift=3, details=2):
     _num_other_nodes(tree)
     _plot(tree, ax, xshift=xshift, details=details)
     mx = _num_maxlevel(tree)
-    print(f' max level = {mx}')
+    #print(f' max level = {mx}')
     ax.set_xlim(-1, mx * xshift + 2)
     ax.set_ylim(-1, my )
     ax.axis('off')
     ax.set_aspect('equal')
-    print(mx, my)
+    #print(mx, my)
     
 def solve_tree(tree):
+
+    # два раза запустим решение (пока так надо чтобы рассчитать вероятности лучших решений)
     _solve_tree(tree)
     _solve_tree(tree)
 
@@ -282,7 +282,7 @@ def _solve_tree(node, _value_terminal=0, _probability_terminal=1):
         node['emv'] = 0                             # задаем начальное приближение emv узла
         if node['type'] == 'decision':
             node['emv_child_nodes'] = {}            # готовим словарь для подсчета emv дочерних узлов
-            num = 0                                 # сбрасываем счетчик
+        num = 0                                 # сбрасываем счетчик
         
         for edge in node['child_edges']:            # переберем все связи рассматриваемого узла
             if node['type'] == 'decision':          

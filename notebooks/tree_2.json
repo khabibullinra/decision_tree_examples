@@ -3,7 +3,7 @@
  "child_edges":[
                 {"name": "Да",
                  "voi_info":"with_info",
-                 "payoff": -5,
+                 "payoff": -50,
                  "child_node": 
                             {"name": "Успешность",
                              "type": "chance",

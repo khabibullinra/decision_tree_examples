@@ -3,7 +3,7 @@ import json
 import matplotlib.pyplot as plt
 
 
-with open('notebooks/tree_3.json', 'r') as f:
+with open('notebooks/tree_3.json', 'r', encoding='utf-8') as f:
     tree = json.load(f)
 
 dtreevoi.solve_tree(tree)
